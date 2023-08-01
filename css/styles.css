@@ -1,0 +1,749 @@
+:root{
+    --width: 230px;
+    --padding: 10px;
+    --verde:#24a818;
+    --hovercolor:rgb(23, 23, 23);
+    --width-collapsed: 50px;
+}
+
+body{
+    background-color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: var(--width-collapsed);
+}
+
+.body-expanded{
+    margin-left: var(--width);
+}
+
+#main-container{
+    color: rgb(255, 255, 255);
+}
+
+
+/* 
+        MENU
+*/
+#sidemenu{
+    background-color: var(--verde);
+    color: white;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+#sidemenu a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/*
+        HEADER
+*/
+#sidemenu #header{
+    box-sizing: border-box;
+}
+
+#sidemenu #header #title{
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: bold; 
+}
+
+#sidemenu #header #title, #sidemenu #header #menu-btn{
+    vertical-align: middle;
+}
+
+#sidemenu #header #menu-btn{
+    display: inline-block;
+}
+
+#sidemenu #header #menu-btn{
+    cursor: pointer;
+    padding: 10px;
+    width: var(--width-collapsed);
+    box-sizing: border-box;
+}
+
+#sidemenu #header #menu-btn:hover{
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #header #menu-btn .btn-hamburger{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+}
+
+
+
+/* 
+        PROFILE
+*/
+
+#sidemenu #profile{
+    padding: var(--padding) 0;
+    text-align: center;
+}
+
+#sidemenu #profile #photo{
+    box-sizing: border-box;
+    
+    margin: 0 auto; 
+}
+
+#sidemenu #profile #photo img{
+    border-radius: 70%;
+    width: 50%;
+}
+
+
+
+/*
+        ITEMS
+*/
+#sidemenu #menu-items{
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+#sidemenu #menu-items .item{
+    width: var(--width);
+}
+
+#sidemenu #menu-items .item .icon{
+    display: inline-block;
+}
+
+#sidemenu #menu-items .item .icon,
+#sidemenu #menu-items .item .title{
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#sidemenu #menu-items .item a{
+    display: block;
+}
+
+#sidemenu #menu-items .item a:hover{
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #menu-items .item .icon{
+    box-sizing: border-box;
+    padding: var(--padding);
+}
+
+#sidemenu #menu-items .item .icon img{
+    width: 100%;
+}
+
+#sidemenu #menu-items .item .title{
+    padding: var(--padding) 0;
+}
+
+
+/*
+        MENU EXPANDED
+*/
+.menu-expanded{
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.menu-expanded #header #title{
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    padding: var(--padding);
+}
+
+.menu-expanded #header #title span{
+    width: calc(var(--width) - var(--width-collapsed) - 5px);
+    overflow: hidden;
+}
+
+.menu-expanded #profile #photo{
+    width: 200px;
+}
+
+.menu-expanded #profile #name{
+    width: 100%;
+}
+
+.menu-expanded #menu-items .item .icon{
+    margin-left: 15px;
+    width: 40px; 
+}
+
+.menu-expanded #menu-items .down{
+    margin-top: 100px;
+}
+
+
+/* 
+        MENU COLLAPSED
+*/  
+
+.menu-collapsed{
+    width: var(--width-collapsed);
+}
+
+.menu-collapsed #header #title{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-collapsed #profile #photo {
+    width: 100%;
+}
+
+.menu-collapsed #profile #name{
+    display: none;
+}
+
+.menu-collapsed #menu-items .item .icon{
+    margin-left: 5px;
+    width: 40px ; 
+}
+
+.menu-collapsed #menu-items .down{
+    margin-top: 175px;
+}
+
+
+
+
+/*
+        COTENIDO
+*/
+
+#contenedor{
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+/* Todos los campos de formulario */
+body .form-control:focus{
+    color:#212529;
+    background-color:#fff;
+    border-color:#24a818;
+    outline:0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 25%);
+}
+
+body .form-check-input:focus{
+    border-color:#24a818;
+    outline:0;
+    box-shadow:0 0 0 .25rem rgba(255, 103, 29, .25)
+}
+
+body .form-check-input:checked{
+    background-color:#24a818;
+    border-color:#24a818;
+}
+
+
+/* LOGIN: Iniciar Sesion */
+#contenedor-login{
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+
+#contenedor-login .header{
+    background-color: #24a818;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#contenedor-login .login{
+    display: flex;
+    place-content: center;
+    text-align: center;
+}
+
+#contenedor-login .header img{
+    height: 60%;
+}
+
+#contenedor-login .form img{
+    height: 100px;
+}
+
+#contenedor-login .form .form-control, #contenedor-login .form .check {
+    margin: 20px;
+    margin-left: 0;
+}
+
+#contenedor-login .form button{
+    margin-top: 10px;
+    width: 80%;
+    background-color: #24a818;
+    border-color: #24a818;
+}
+
+#contenedor-login p{
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 20px;
+    color: rgb(112, 106, 106);
+}
+
+
+
+/* WELCOME: Bienvenida */
+
+#contenedor .welcome h1{
+    margin: 0;
+    color: #24a818;
+    font-size: 60px;
+    font-weight: normal;
+    font-style: oblique;
+    text-transform: capitalize;
+}
+
+#contenedor .welcome p{
+    color: #47525e7e;
+    font-weight: lighter;
+    font-style:oblique;
+}
+
+
+/* ENTERUSERS: Ingreso de usuarios */
+
+#contenedor-in{
+    min-height: 100vh;
+    display: grid; 
+}
+
+#menu-in{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#menu-in .in-title{
+    border-radius: 20px;
+    border: 3px solid rgb(151, 151, 151);
+    height: 40px;
+    width: 400px;  
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    color: #5a5858;
+    margin-top: 110px;
+}
+
+#menu-in .code{
+    margin-top: 100px;
+    border: 3px solid #24a818;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#menu-in .code p{
+    margin: 0;
+    font-style: italic;
+    color: rgb(99, 96, 96) ;
+    
+}
+
+#menu-in .scan-code{
+    margin-top: 50px;
+}
+
+#menu-in .scan-code button{
+    background-color:#24a818;
+    border: 0px;
+    margin-top: 30px;
+}
+
+
+
+/* USERS: Lista de usuarios */
+
+#contenedor-users{
+    display: grid;
+    display: block;
+}
+
+
+/* Boton: Registro usuario */
+#contenedor-users .btn-register{
+    text-align: right;
+    margin: 20px;
+    margin-bottom: 0;
+}
+
+#contenedor-users .btn-register button{
+    background-color: #24a818;
+    border: none;
+}
+
+#contenedor-users .btn-register button:hover{
+    background-color: #000000;
+}
+
+
+/* Titulo: Lista de usuarios*/
+#contenedor-users #table-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedor-users #table-user .user-title{
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid rgb(151, 151, 151);
+    height: 40px;
+    width: 250px;  
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    color: #5a5858;
+    margin:0;
+    margin-top: 10px;
+}
+
+#contenedor-users #table-user .user-title p{
+    margin: 0;
+    font-style: italic;
+    color: rgb(99, 96, 96) ;
+}
+
+
+/* Buscar: Campo y boton buscar */
+#contenedor-users #table-user .search{
+    margin-top: 30px;
+}
+
+#contenedor-users #table-user .search button{
+    background-color: #24a818;
+    color: #fff;
+    border: none;
+    width: 100px;
+}
+
+#contenedor-users #table-user .search button:hover{
+    background-color: #000000;
+}
+
+#contenedor-users #table-user .search img{
+    height: 30px;
+    margin: 5px; 
+    margin-right: 15px;
+}
+
+
+/* Linea */
+#contenedor-users #table-user .line{
+    margin: 10px;
+    margin-top: 30px;
+    min-width: 80%; 
+    height: 2px; 
+    background: rgba(114, 114, 114, 0.25);
+}
+
+
+/* Tabla */
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    height: 40px;
+}
+
+#contenedor-users #table-user .user-table{
+    overflow-x: scroll;
+    width: 90%;
+    align-items: center;
+}
+
+#contenedor-users #table-user .user-table .table tbody, #contenedor-users #table-user .user-table .table thead{
+    vertical-align: middle;
+    
+}
+
+#contenedor-users #table-user .user-table .table .prin{
+   padding-right: 300px;
+}
+
+#contenedor-users #table-user .user-table .table .secu{
+    padding-right: 80px; 
+}
+
+#contenedor-users #table-user .user-table .table>:not(caption)>*>*{
+    padding: 1rem 1rem;
+}
+
+#contenedor-users #table-user .user-table .table a{
+    color: #24a818;
+}
+
+
+
+/* DEVICES: Lista de dispositivos */
+.clearfix{
+    clear: both;
+}
+
+#content{
+    float: left;
+width: calc(15% - 15px);
+min-height: 500px;
+background: #24a818;;
+padding: 40px;
+}
+
+.article{
+    color: white;
+    margin-top:15px;
+    margin-bottom: 15px;
+    padding-bottom:10px ;
+    border-bottom: 1px solid #eee;
+    
+}
+
+aside{
+    float: left;
+    width: calc(80% - 80px);
+    background: white;
+    min-height: 500px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 50px;
+}
+
+
+.btn1{
+    background-color: #24a818;;
+    height: 40px;
+    width: 150px;
+    color: white;
+    border-color:  white;
+}
+
+.btn2{
+    background-color: #24a818;;
+    height: 20px;
+    width: 100px;
+    color: white;
+    border-color:  white;
+}
+
+
+
+/* VEHICLES: LISTA DE VEHICULOS */
+
+:root{
+    --blanco:#ffffff;
+    --verde:#24a818;;
+    --negro:#060606;
+}
+    
+#container{
+ 
+    width: 1100px;
+    margin: 0px auto;
+    border: 1px solid rgb(255, 255, 255);
+    display: flex;
+    place-content: center;
+
+}
+
+#content{
+    float: left;
+width: calc(15% - 10px);
+min-height: 20px;
+background:var(--naranja);
+padding: 40px;
+position: center;
+}
+
+.article{
+    color: white;
+    margin-top:1px;
+    margin-bottom: 15px;
+    padding-bottom:10px ;
+    position: center;  
+}
+
+.do{
+    color: white;
+    margin-top:1px;
+    margin-bottom: 15px;
+    padding-bottom:10px ;
+    border-bottom: 3px solid #eee;
+}
+aside{
+    float: left;
+    width: calc(80% - 80px);
+    background:var(--blanco);
+    min-height: 500px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: center;
+    
+    
+}
+
+.btn1{
+    background-color: #24a818;
+    height: 40px;
+    width: 150px;
+    color: white;
+    border-color:  white;
+    position: center;
+}
+
+.btn2{
+    background-color: #24a818;
+    height: 30px;
+    width: 100px;
+    color: white;
+    border-color:  white;
+}
+
+
+.boton{
+    background-color: var(--verde);
+    color: var(--blanco);
+    padding: 1rem; /*aqui no es necesario las otras porque se repiten*/
+    margin-top: 1px; /*tamaño*/
+    font-size: 1rem; /*tamaño de*/
+    text-decoration: none; /*sin linea*/
+    text-transform: uppercase; /*mayusculas*/
+    font-weight: bold; /*negrita*/
+    border-radius: .4rem; /*esquinas redondeadas del boton*/
+    border:none;
+    position: absolute;/*es que no cambia de posicion se mantiene donde esta*/
+    top: 3;/*agregar un espacio hacia arriba*/
+    
+    bottom: 0;/*agregar un espacio hacia abajo*/
+    left:10;/*espacio en la izquierda*/
+    right: 5;/*espacio a la derecha*/
+    position: relative;
+}
+
+#contento1{
+    float: left;
+width: calc(25% - 5px);
+min-height: 600px;
+background:var(--blanco);
+padding: 90px;
+top: 3;/*agregar un espacio hacia arriba*/
+top: 0;/*agregar un espacio hacia arriba*/
+
+position: relative;
+
+}
+#contento2{
+    float: left;
+width: calc(25% - 5px);
+min-height: 600px;
+background:var(--blanco);
+padding: 5px;
+top: 3;/*agregar un espacio hacia arriba*/
+top: 0;/*agregar un espacio hacia arriba*/
+font-size: 22px; /*tamño de letra*/
+position: relative;
+
+}
+#contento3{
+    float: left;
+width: calc(25% - 5px);
+min-height: 600px;
+background:var(--blanco);
+padding: 5px;
+top: 3;/*agregar un espacio hacia arriba*/
+top: 0;/*agregar un espacio hacia arriba*/
+font-size: 22px; /*tamño de letra*/
+position: relative;
+
+}
+.container{
+    position: center;
+}
+#tamañoimagen{
+    background-size:200px;
+
+}
+.redimension{
+width :300px;
+height:300px;
+}
+
+
+/* REGISTRAR VEHICULO: Seleccionar tipo de vehiculo */
+#contenedor h1{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#menu-vehicle{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#menu-vehicle .vehicle-type{
+    margin: 50px;
+}
+
+#menu-vehicle .icon{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #24a818; 
+}
+
+#menu-vehicle .icon img{
+    width: 70%;
+    padding-top: 15%;
+    
+}
+
+#menu-vehicle .vehicle-type a{
+    text-decoration: none;
+}
+
+#menu-vehicle .vehicle-type a .title{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.btn-form{
+    margin: 10px 0;
+}
